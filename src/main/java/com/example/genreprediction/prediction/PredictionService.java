@@ -24,6 +24,7 @@ public class PredictionService {
             @Override public String getFilename() {return file.getOriginalFilename();}
         };
 
+        System.out.println("wf");
 
         MLPredictResponse ml = mlClient.post()
                 .uri("/predict")

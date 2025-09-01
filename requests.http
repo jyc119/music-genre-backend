@@ -1,0 +1,14 @@
+GET http://localhost:8080/api/v1/genres/health
+
+###
+
+### Predict with explicit boundary
+POST http://localhost:8080/api/v1/genres/predict
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="stayin_alive.wav"
+Content-Type: audio/wav
+
+< test_data/stayin_alive.wav
+--MyBoundary--
